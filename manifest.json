@@ -1,22 +1,15 @@
 {
-  "name": "Erstelle eine neue Workout-Tracker App",
-  "icon": "E",
-  "color": "#1a2a3a",
-  "description": "",
+  "name": "Workout Tracker",
+  "icon": "🏋️",
+  "color": "#1a3a2a",
+  "description": "Trainingseinheiten loggen, Übungen mit Sets/Reps/Gewicht erfassen und Fortschritte verfolgen",
   "inputs": [
-    {
-      "id": "data",
-      "desc": "Beliebige Daten empfangen"
-    }
+    { "id": "workout", "desc": "Workout-Daten empfangen (z.B. von Fitness-Plan)" }
   ],
   "outputs": [
-    {
-      "id": "state",
-      "desc": "Aktueller App-Zustand"
-    }
+    { "id": "stats", "desc": "Trainingsstatistiken ausgeben" },
+    { "id": "last-workout", "desc": "Letztes Workout weitergeben" }
   ],
-  "dataFiles": [
-    "state"
-  ],
+  "dataFiles": ["state"],
   "pulseSubscriptions": []
 }
