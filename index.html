@@ -133,12 +133,12 @@ body {
   color: var(--teal, #f97316);
   border: 1px solid rgba(249, 115, 22, 0.3);
 }
-.muscle-tag.m-brust     { background: rgba(255,100,100,0.12); color: #f07070; border-color: rgba(255,100,100,0.25); }
-.muscle-tag.m-ruecken   { background: rgba(100,150,255,0.12); color: #8ab4ff; border-color: rgba(100,150,255,0.25); }
-.muscle-tag.m-beine     { background: rgba(255,180,50,0.12);  color: #f5c842; border-color: rgba(255,180,50,0.25); }
-.muscle-tag.m-schultern { background: rgba(180,100,255,0.12); color: #c07aff; border-color: rgba(180,100,255,0.25); }
-.muscle-tag.m-arme      { background: rgba(255,140,50,0.12);  color: #f59042; border-color: rgba(255,140,50,0.25); }
-.muscle-tag.m-core      { background: rgba(50,200,100,0.12);  color: #50d080; border-color: rgba(50,200,100,0.25); }
+.muscle-tag.m-brust     { background: rgba(249,115,22,0.18); color: #ff8c42; border-color: rgba(249,115,22,0.4); }
+.muscle-tag.m-ruecken   { background: rgba(249,115,22,0.10); color: #fba45a; border-color: rgba(249,115,22,0.25); }
+.muscle-tag.m-beine     { background: rgba(249,115,22,0.22); color: #f97316; border-color: rgba(249,115,22,0.45); }
+.muscle-tag.m-schultern { background: rgba(249,115,22,0.14); color: #ff7a20; border-color: rgba(249,115,22,0.30); }
+.muscle-tag.m-arme      { background: rgba(249,115,22,0.20); color: #fb923c; border-color: rgba(249,115,22,0.40); }
+.muscle-tag.m-core      { background: rgba(249,115,22,0.12); color: #fdba74; border-color: rgba(249,115,22,0.28); }
 
 .btn-icon {
   background: none;
@@ -247,7 +247,7 @@ body {
   color: var(--text, #c9d1d9);
   border: 1px solid var(--border, #30363d);
 }
-.btn.danger { background: var(--danger, #c0392b); }
+.btn.danger { background: #ea580c; }
 .btn-row { display: flex; gap: 8px; }
 .btn-row .btn { flex: 1; }
 
@@ -837,7 +837,7 @@ function renderMuscleChart(stats) {
     return;
   }
 
-  const colors = { Brust: '#f07070', Rücken: '#8ab4ff', Beine: '#f5c842', Schultern: '#c07aff', Arme: '#f59042', Core: '#50d080' };
+  const colors = { Brust: '#ff8c42', Rücken: '#fba45a', Beine: '#f97316', Schultern: '#ff7a20', Arme: '#fb923c', Core: '#fdba74' };
   const W = canvas.width, H = canvas.height;
   const cx = H / 2, cy = H / 2, r = H / 2 - 14;
   const total = muscles.reduce((s, m) => s + stats.muscleVolume[m], 0);
@@ -886,7 +886,7 @@ function renderTopExercises(stats) {
         <span style="color:var(--teal);">${count}×</span>
       </div>
       <div style="background:var(--bg);border-radius:3px;height:6px;overflow:hidden;">
-        <div style="background:var(--teal,#2ea89e);height:100%;width:${(count/max)*100}%;border-radius:3px;"></div>
+        <div style="background:var(--teal,#f97316);height:100%;width:${(count/max)*100}%;border-radius:3px;"></div>
       </div>
     </div>
   `).join('');
