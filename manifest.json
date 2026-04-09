@@ -1,7 +1,7 @@
 {
   "name": "Workout Tracker",
   "icon": "🏋️",
-  "color": "#1a3a2a",
+  "color": "#facc15",
   "description": "Trainingseinheiten loggen, Übungen mit Sets/Reps/Gewicht erfassen und Fortschritte verfolgen",
   "inputs": [
     { "id": "workout", "desc": "Workout-Daten empfangen (z.B. von Fitness-Plan)" }
